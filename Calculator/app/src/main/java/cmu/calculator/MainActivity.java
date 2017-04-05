@@ -105,7 +105,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         } else if (functionCode == 2) {
             result = leftArg * rightArg;
         } else if (functionCode == 3) {
-            result = leftArg / rightArg;
+            if (rightArg == 0) {
+                result = 0;
+            } else {
+                result = leftArg / rightArg;
+            }
         }
 
         //show the entered expression in display area
